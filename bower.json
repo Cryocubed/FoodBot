@@ -1,0 +1,17 @@
+{
+  "name": "foodbot_site",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "joseph"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
