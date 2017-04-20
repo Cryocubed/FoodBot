@@ -31,12 +31,14 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
-
+/*
   '/': {
     view: 'homepage'
   },
+  */
+  '/': 'FoodController.foodWebPage',
   
-  '/fetchData': 'FoodController.get',
+  '/fetchData': 'FoodController.pullData',
   '/msgReceived': 'BotController.callBot'
 
   /***************************************************************************

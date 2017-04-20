@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-  <head>
-    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+<html>
 
-    <!-- Import foundation -->
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Import jquery
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    -->
-    <!--
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Rice University Food</title>
+
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+  <!--
         Stylesheets and Preprocessors
         ==============================
 
@@ -32,13 +35,15 @@
             + Use a different or additional preprocessor, like SASS, SCSS or Stylus
     -->
 
-    <!--STYLES-->
-    <link rel="stylesheet" href="/styles/app.css">
-    <link rel="stylesheet" href="/styles/foundation.css">
-    <link rel="stylesheet" href="/styles/importer.css">
-    <!--STYLES END-->
-  </head>
-    <%- body %>
+  <!--STYLES-->
+  <link rel="stylesheet" href="/styles/importer.css">
+  <link rel="stylesheet" href="/styles/primary-styles.css">
+  <!--STYLES END-->
+
+</head>
+
+<body>
+  <%- body %>
 
 
 
@@ -93,10 +98,7 @@
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
-    <script src="/js/app.js"></script>
-    <script src="/js/vendor/foundation.js"></script>
-    <script src="/js/vendor/jquery.js"></script>
-    <script src="/js/vendor/what-input.js"></script>
     <!--SCRIPTS END-->
-  </body>
+</body>
+
 </html>
