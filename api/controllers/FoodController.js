@@ -26,10 +26,10 @@ module.exports = {
 
 				var jsonData = {
 					"South": [],
-					"North": [],
 					"West": [],
 					"Baker": [],
 					"Seibel": [],
+					"North": [],
 					"SidRich": []
 				}
 

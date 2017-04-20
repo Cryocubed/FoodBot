@@ -1,85 +1,40 @@
+<% delete foodData._locals %>
+
 <div class="container">
   <div class="row">
-    <div class="col-12 col-md-4">
-      <div class="card">
-        <div class="card-header">South</div>
-        <div class="card-block">
-          <blockquote class="card-blockquote">
-            <ul>
-              <li><%= foodData.South[0] %></li>
-              <li>Option 2</li>
-            </ul>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-4">
-      <div class="card">
-        <div class="card-header">West</div>
-        <div class="card-block">
-          <blockquote class="card-blockquote">
-            <ul>
-              <li>Option 1</li>
-              <li>Option 2</li>
-            </ul>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-4">
-      <div class="card">
-        <div class="card-header">Seibel</div>
-        <div class="card-block">
-          <blockquote class="card-blockquote">
-            <ul>
-              <li>Option 1</li>
-              <li>Option 2</li>
-            </ul>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-md-4">
-      <div class="card">
-        <div class="card-header">Baker</div>
-        <div class="card-block">
-          <blockquote class="card-blockquote">
-            <ul>
-              <li>Option 1</li>
-              <li>Option 2</li>
-            </ul>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-4">
-      <div class="card">
-        <div class="card-header">North</div>
-        <div class="card-block">
-          <blockquote class="card-blockquote">
-            <ul>
-              <li>Option 1</li>
-              <li>Option 2</li>
-            </ul>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-4">
-      <div class="card">
-        <div class="card-header">Sid</div>
-        <div class="card-block">
-          <blockquote class="card-blockquote">
-            <ul>
-              <li>Option 1</li>
-              <li>Option 2</li>
-            </ul>
-          </blockquote>
-        </div>
-      </div>
-    </div>
-  </div>
+    
+    <% var curCol=0; %>
+    <% for (var currServ in foodData) { %>   
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="card-header"><h4 id="<%= currServ %>"><%= currServ %></h4> </div>
+          <div class="card-block">
+            <blockquote class="card-blockquote">
+              
+              <% for (i=0; i<foodData[currServ].length; i++){ %>
+                <p><%= foodData[currServ][i] %></p>
 
+                <% if (i<foodData[currServ].length-1){ %>
+                  <hr>
+                <% } %>
+              <% } %>
+            </blockquote>
+          </div>
+        </div>
+        <div class="row hidden-md-up"><br></div>
+        
+      </div>
+      <% curCol++ %>
+      <% if (curCol==3) { %>
+      
+  </div>
+        <div class="row hidden-md-down"><br></div>
+  <div class="row">
+        <% curCol=0; %>
+      <% } %>
+    <% } %>
+    
+  </div>
 </div>
+
+<script type='text/javascript'>$("#SidRich").text("Sid")</script>

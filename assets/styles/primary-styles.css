@@ -1,0 +1,12 @@
+body {
+  padding-top: 3rem;
+}
+
+.card {
+  height: 100%;
+} 
+
+p::first-letter { 
+    text-transform: capitalize;
+}
+
